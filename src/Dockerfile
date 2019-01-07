@@ -6,7 +6,7 @@ ENV LANG zh_CN.UTF-8
 
 ENV LC_CTYPE zh_CN.UTF-8
 
-ENV PHP_EXT_SWOOLE=4.2.10
+ENV PHP_EXT_SWOOLE=4.2.11
 
 RUN echo "http://mirrors.aliyun.com/alpine/v3.8/main" > /etc/apk/repositories \
     && echo "http://mirrors.aliyun.com/alpine/v3.8/community" >> /etc/apk/repositories \
