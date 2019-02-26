@@ -6,7 +6,7 @@ ENV LANG zh_CN.UTF-8
 
 ENV LC_CTYPE zh_CN.UTF-8
 
-ENV PHP_EXT_SWOOLE=4.2.12
+ENV PHP_EXT_SWOOLE=4.2.13
 
 RUN echo "http://mirrors.aliyun.com/alpine/v3.8/main" > /etc/apk/repositories \
     && echo "http://mirrors.aliyun.com/alpine/v3.8/community" >> /etc/apk/repositories \
@@ -31,6 +31,8 @@ RUN docker-php-ext-install soap
 RUN docker-php-ext-install gd
 
 RUN docker-php-ext-install zip
+
+RUN docker-php-ext-install sockets
 
 RUN curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer \
